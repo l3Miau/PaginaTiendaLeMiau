@@ -1,0 +1,148 @@
+/*fuentes utilizadas*/
+@font-face{ 	
+	font-family: 'headerFont';
+	src: url("fuentes/Pacifico-Regular.ttf");
+}
+
+@font-face{ 	
+	font-family: 'header2Font';
+	src: url("fuentes/Staatliches-Regular.ttf");
+}
+
+@font-face{ 	
+	font-family: 'bodyFont';
+	src: url("fuentes/Solway-Regular.ttf");
+}
+
+/*titulos*/
+h1{
+	text-align: center;
+	font-size: 500%;
+	text-shadow: 3px 3px 10px #008B8B;
+	margin-bottom: 1%;
+	font-family: headerFont;
+}
+
+/*fondo de la pagina*/
+body{
+	background-image: url(imagenes/fondos/fondo3.png);
+}
+
+/*parrafos*/
+p{
+	font-family: bodyFont;
+	font-size: 150%;
+	padding-right: 2px;
+	padding-left: 2px;
+}
+
+/*listas*/
+li{
+	font-family: bodyFont;
+	font-size: 150%;	
+	margin-left: 5%;
+	margin-top: 1%;
+}
+
+li:hover{
+	background-color: #bdf6e9;
+}
+
+/*cambiar el color de los numeros*/
+ol {
+	list-style: none; 
+	counter-reset: li
+}
+li::before {
+	content: counter(li); color: #bdf6e9;
+  	display: inline-block; 
+  	width: 25px; 	
+ }
+li {	
+	counter-increment: li;	
+}
+
+/*clase utilizada en el menu de la pagina principal*/
+.Menu{			
+	/*imagenes*/	   
+	background-image: url(imagenes/cats/icon.png);	
+	background-size: 115%;	
+	background-position: bottom;	
+	width: 250px; 
+	height: 250px;	
+	filter: drop-shadow(3px 3px 5px #008B8B);
+
+	/*texto*/
+	text-align: center;
+	vertical-align: middle;						
+	transition: 0.50s;		
+	display: table-cell;	
+	margin-right: 30px;		
+}
+
+.Menu:hover{	
+	transform: scale(1.2);
+}
+
+a{
+	text-decoration: none;
+	color: #B0E0E6;
+	font-family: header2Font;
+	font-size: 130%;
+}
+
+
+#peek{
+	position: absolute;
+	left:-2%;
+	top:0%;			
+	width:90px;
+	transition-duration: 0.5s; 
+}
+
+#peek:hover{
+	transform: translateX(30px) ;			
+}
+
+/*Menu flotante*/
+.menu{
+  position: absolute;
+  display: inline-block;
+}
+
+.contenidoMenu{
+  	display: none;
+  	position: absolute;
+	left:-310%;
+	transition-duration: 2s;
+  
+	min-width: 60px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.contenidoMenu a{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-family: header2Font;
+  display: block;
+   
+}
+
+.contenidoMenu a:hover{
+	background-color: #008B8B; 
+	color: #B0E0E6;
+}
+
+.menu:hover .contenidoMenu{
+	background-color: #B0E0E6;
+	color: #bdf6e9;
+	display: block;  
+	transform: translate(300px);
+}
+
+.menu:hover{
+	background-color: 
+	transform: translate(300px);
+} /*008B8B*/ /*bdf6e9*/
